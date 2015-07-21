@@ -12,18 +12,20 @@
 
     <!-- Style sheet link -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="one-page-wonder.css" rel="stylesheet">
     
 </head>
 <body>
-    <main role="main">
-        <center>
-            <h1>Country Choice</h1>
-            
-                <p>You are now from</p>
-            <h2><span id="country">A COUNTRY</span>!</h2>
-        </center>
-    </main>
-    
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h2>Welcome to the Earth.</h2>
+                <h3>You are now a citizen of</h3>
+                <h1 id="countryheader"><span id="country" class="country">A COUNTRY</span>!</h1>
+            </div>
+        </div>
+    </header>
+        
     <script>
         var a = new Object();
         a["China"] = 1371060000;
@@ -282,6 +284,24 @@
         a["French Southern and Antarctic Lands (France)"] = 140;
         a["Pitcairn Islands (UK)"] = 56;
         a["Midway Atoll (U.S.)"] = 40;
+        
+        country_header = document.getElementById("countryheader");
+        country_header.style.opacity = 0;
+
+        setTimeout(function() {
+            var opacity = 0,
+                animate = setInterval(function() {
+
+                    opacity += 0.05;
+
+                    if (opacity >= 1) {
+                        clearInterval(animate);
+                    }
+
+                    country_header.style.opacity = opacity;
+
+                }, 100);
+        }, 2000);
         
         var sorted_keys = Object.keys(a);
         var sum = 0;
