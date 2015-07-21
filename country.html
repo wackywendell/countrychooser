@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Country</title>
+    
+    <meta name="description" content="">
+    
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style sheet link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="all">
+    
+</head>
+<body>
+    <main role="main">
+        <center>
+            <h1>Country Choice</h1>
+            
+                <p>You are now from</p>
+            <h2><span id="country">A COUNTRY</span>!</h2>
+        </center>
+    </main>
+    
+    <script>
+        var a = new Object();
+        a["China"] =                        1371060000;
+        a["India"] =                        1274440000;
+        a["United States"] =                 321450000;
+        a["Indonesia"] =                     255461700;
+        a["Brazil"] =                        204633000;
+        a["Pakistan"] =                      190402000;
+        a["Nigeria"] =                       183523000;
+        a["Bangladesh"] =                    158712000;
+        a["Russia"] =                        146524812;
+        a["Japan"] =                         126890000;
+        
+        var sorted_keys = Object.keys(a);
+        var sum = 0;
+        
+        sorted_keys.map( function(key) {
+            sum += a[key];
+        });
+        
+        var person_number = Math.floor(Math.random() * sum);
+        
+        var running_sum = 0;
+        for (var i = 0; i < sorted_keys.length; i++) {
+            key = sorted_keys[i];
+            running_sum += a[key];
+            if(running_sum > person_number) {
+                document.getElementById("country").innerHTML = key;
+                break;
+            }
+        };
+    </script>
+</body>
+</html>
