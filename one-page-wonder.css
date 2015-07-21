@@ -1,0 +1,47 @@
+/*!
+ * Taken from: Start Bootstrap - One Page Wonder HTML Template
+ * (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+ 
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url('blue-marble-earth-wallpaper-1920.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headline {
+    padding: 200px 0;
+}
+
+.headline h1 {
+    font-size: 110px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.headline h2 {
+    font-size: 63px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.headline h3 {
+    font-size: 48px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.country {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
