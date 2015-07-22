@@ -259,7 +259,9 @@ function countryUpdate () {
   a['Midway Atoll (U.S.)'] = 40;
   /* jshint -W069 */
   var countryHeader = document.getElementById('countryheader');
+  var retryButton = document.getElementById('retrybutton');
   countryHeader.style.opacity = 0;
+  retryButton.style.opacity = 0;
 
   setTimeout(function() {
     var opacity = 0;
@@ -267,11 +269,12 @@ function countryUpdate () {
 
       opacity += 0.05;
 
+      countryHeader.style.opacity = opacity;
+      
       if (opacity >= 1) {
         clearInterval(animate);
+        retryButton.style.opacity = opacity;
       }
-
-      countryHeader.style.opacity = opacity;
 
     }, 100);
   }, 2000);
@@ -297,3 +300,5 @@ function countryUpdate () {
 }
 
 window.onload = countryUpdate;
+
+document.getElementById('countryheader').onclick = countryUpdate;
