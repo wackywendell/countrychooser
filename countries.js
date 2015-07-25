@@ -1,4 +1,5 @@
 function countryUpdate () {
+  "use strict";
   var a = {};
   /* jshint -W069 */
   a['China'] = 1371060000;
@@ -257,32 +258,34 @@ function countryUpdate () {
   a['French Southern and Antarctic Lands (France)'] = 140;
   a['Pitcairn Islands (UK)'] = 56;
   a['Midway Atoll (U.S.)'] = 40;
-  /* jshint -W069 */
+  /* jshint +W069 */
   var countryHeader = document.getElementById('countryheader');
   var retryButton = document.getElementById('retrybutton');
   countryHeader.style.opacity = 0;
-  retryButton.style.opacity = 0;
+  retryButton.style.opacity = 0.8;
+  retryButton.disabled = true;
 
   setTimeout(function() {
     var opacity = 0;
     var animate = setInterval(function() {
 
-      opacity += 0.05;
+      opacity += 0.025;
 
       countryHeader.style.opacity = opacity;
       
       if (opacity >= 1) {
         clearInterval(animate);
-        retryButton.style.opacity = opacity;
+        retryButton.style.opacity = 1;
+        retryButton.disabled = false;
       }
 
-    }, 100);
-  }, 2000);
+    }, 50);
+  }, 1000);
 
   var sortedKeys = Object.keys(a);
   var sum = 0;
 
-  sortedKeys.map(function(key) {
+  sortedKeys.map(function (key) {
     sum += a[key];
   });
 
