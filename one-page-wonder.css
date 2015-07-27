@@ -5,15 +5,17 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
  
-.header-image {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: url('blue-marble-earth-wallpaper-1920.jpg') no-repeat center center scroll;
+body {
+    background: url('blue-marble-earth-wallpaper-1920.jpg') no-repeat center center scroll #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .headline {
