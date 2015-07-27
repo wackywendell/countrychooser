@@ -5,20 +5,27 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
  
-body {
+.header-image {
+    width: 100%;
+    text-align: center;
+
     background: url('blue-marble-earth-wallpaper-1920.jpg') no-repeat center center scroll #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-.header-image {
-    display: block;
+
+    /* Vertical centering */
+    display: table;
+    position: absolute;
+    height: 100%;
     width: 100%;
-    text-align: center;
 }
 
 .headline {
+    /* Vertical centering */
+    display: table-cell;
+    vertical-align: middle;
     padding: 200px 0;
 }
 
